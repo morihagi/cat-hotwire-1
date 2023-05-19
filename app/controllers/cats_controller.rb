@@ -1,10 +1,10 @@
 class CatsController < ApplicationController
   before_action :set_cat, only: %i[ show edit update destroy ]
-
+  
   # GET /cats
   def index
     # @catsに対してページネートできるようにする
-    @cats = Cat.page(params[:page])
+    # @cats = Cat.page(params[:page])
 
     # `Cat.ransack`でCatに対してransackを使う
     # params[:q]には検索フォームで指定した検索条件が入る
