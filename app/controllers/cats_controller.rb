@@ -19,8 +19,7 @@ class CatsController < ApplicationController
   end
 
   # GET /cats/1
-  def show
-  end
+  def show; end
 
   # GET /cats/new
   def new
