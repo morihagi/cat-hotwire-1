@@ -35,7 +35,7 @@ class CatsController < ApplicationController
     @cat = Cat.new(cat_params)
 
     if @cat.save
-      redirect_to @cat, notice: "Cat was successfully created."
+      flash.now.notice = "Cat was successfully updated."
     else
       render :new, status: :unprocessable_entity
     end
@@ -44,7 +44,7 @@ class CatsController < ApplicationController
   # PATCH/PUT /cats/1
   def update
     if @cat.update(cat_params)
-      # redirect_to @cat, notice: "Cat was successfully updated."
+      flash.now.notice = "Cat was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
