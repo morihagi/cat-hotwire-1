@@ -35,7 +35,7 @@ class CatsController < ApplicationController
     @cat = Cat.new(cat_params)
 
     if @cat.save
-      flash.now.notice = "Cat was successfully updated."
+      flash.now.notice = "Cat was successfully registerd."
     else
       render :new, status: :unprocessable_entity
     end
